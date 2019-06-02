@@ -1,8 +1,18 @@
 # audio-playback
 
 a nodejs library that wraps web-audio-api and speaker and simplifies their interfaces.
-As a drawback Streamsound has limited versatility.
+As a drawback audio-playback has limited versatility.
 Just give it an array of wav soundfile paths and you will get an array of objects with methods available on the sound stream.
+
+## Installation
+
+with yarn
+
+`yarn add audio-playback`
+
+with npm
+
+`npm i audio-playback`
 
 ## Usage
 
