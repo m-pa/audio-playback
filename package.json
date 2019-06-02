@@ -7,5 +7,9 @@
   "dependencies": {
     "speaker": "^0.4.2",
     "web-audio-api": "^0.2.2"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/m-pa/audio-playback"
   }
 }
