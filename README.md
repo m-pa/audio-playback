@@ -11,17 +11,19 @@ Add this repo to your package json as dependancy and `yarn`.
 then
 
 ``` index.js
-  const { sounds } = require('../../index')
+const { sounds } = require('../../index')
 
-  async function main () {
-    const soundObjects = await sounds(['Tribal.wav'])
-    soundObjects.map((sound) => {
-      sound.bufferNode.start(0)
-      sound.gainNode.gain.value =  0.5
-    })
-  }
+async function main () {
+  const soundObjects = await sounds(['powerpad.wav'])
+  soundObjects.map((sound) => {
+    sound.bufferNode.start(0)
+  })
 
-  main()
+  // Do somthing with the audio stream at a later point
+  setTimeout(() => soundObjects.map(sound => sound.gainNode.gain.value = .1), 3000)
+}
+
+main()
 ```
 
 ## License
