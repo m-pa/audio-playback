@@ -2,15 +2,12 @@ const fs = require('fs')
 const { AudioContext } = require('web-audio-api')
 const Speaker = require('speaker')
 const context = new AudioContext
+const path = require('path')
 
-function getSounds (arr) {
-  const paths = arr
-    ? arr
-    : ['Nacht.wav', 'Regen.wav', 'Wald.wav', 'Tribal.wav', 'Gewitter.wav']
-
+function getSounds (paths) {
   try {
     return paths.map((file) => ({
-      buffer: fs.readFileSync(__dirname + '/sounds/' + file),
+      buffer: fs.readFileSync(path.resolve(process.cwd(), file)),
       name: file.split('.')[0]
     }))
   } catch (err) {
