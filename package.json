@@ -1,7 +1,7 @@
 {
   "name": "audio-playback",
   "description": "A wrapper that simplifies web-audio-api's interface for basic use cases.",
-  "version": "0.1.4",
+  "version": "0.1.5-alpha1",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
