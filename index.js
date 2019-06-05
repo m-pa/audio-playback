@@ -40,7 +40,6 @@ async function initSound(sound) {
         bufferNode.connect(gainNode)
         gainNode.connect(context.destination)
         bufferNode.buffer = audioBuffer
-        bufferNode.loop = true
         bufferNode.on('end', () => bufferNode.start(0))
         resolve({
           gainNode,
