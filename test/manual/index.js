@@ -1,7 +1,7 @@
 const { sounds } = require('../../index')
 
 async function main () {
-  const soundObjects = await sounds(['powerpad.wav'])
+  const soundObjects = await sounds(['./test/manual/powerpad.wav'])
   soundObjects.map((sound) => {
     sound.bufferNode.start(0)
   })
