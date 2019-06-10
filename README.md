@@ -21,7 +21,7 @@ Add this repo to your package json as dependancy and `yarn`.
 then
 
 ``` index.js
-const { sounds } = require('../../index')
+const { sounds } = require('audio-playback')
 
 async function main () {
   const soundObjects = await sounds(['powerpad.wav'])
